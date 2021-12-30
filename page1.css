@@ -97,7 +97,7 @@ nav a:hover {
 }
 
 .the-left-one .alt-font {
-    margin-bottom: -2%;
+    margin-bottom: 2%;
     font-family: Didot;
     font-weight: bolder;
     font-size: 50px;
@@ -105,7 +105,7 @@ nav a:hover {
 
 .the-left-two,
 .the-left-three {
-    margin-bottom: -2%;
+    margin-bottom: 4%;
 }
 
 .the-right {
@@ -145,13 +145,13 @@ nav a:hover {
 }
 
 .container-right-two p {
-    margin-top: -4%;
+    margin-top: 4%;
 }
 
 .container-left {
     display: flex;
     flex: 1;
-    margin-bottom: -4%;
+    margin-bottom: 4%;
 }
 
 .container-left-one {
@@ -224,7 +224,7 @@ nav a:hover {
 }
 
 .the-left1-one .alt-font {
-    margin-bottom: -2%;
+    margin-bottom: 2%;
     font-family: Didot;
     font-weight: bolder;
     font-size: 50px;
@@ -233,11 +233,11 @@ nav a:hover {
 .the-left1-two,
 .the-left1-three,
 .the-left1-four {
-    margin-bottom: -4%;
+    margin-bottom: 4%;
 }
 
 .alt-font {
-    margin-bottom: -2%;
+    margin-bottom: 2%;
 }
 
 .the-right1-one,
@@ -250,6 +250,7 @@ nav a:hover {
     border-radius: 5px;
     display: inline-block;
     padding: 10px;
+    margin-top: 4%;
 }
 
 .menu-button:hover {
@@ -411,6 +412,7 @@ nav a:hover {
 
 .sibar-two p {
     font-size: 22px;
+    margin-bottom: 4%;
 }
 
 .feature-layout {
@@ -522,14 +524,14 @@ nav a:hover {
 
 .container-footer {
     position: relative;
-    margin-top: 2%;
+    /* margin-top: 2%; */
     background-color: black;
 }
 
 .footer-text {
     display: flex;
     color: white;
-    height: 60px;
+    height: 100px;
     padding-top: 2%;
     padding-bottom: 0%;
     justify-content: space-around;
@@ -538,16 +540,23 @@ nav a:hover {
 .footer-text .ft-text-left {
     padding-left: 5%;
     margin-top: -1%;
+    flex: 2;
+    text-align: center;
 }
 
 .footer-text .ft-text-right {
     padding-right: 5%;
     margin-top: -1%;
+    flex: 1;
+    
+
+
+
 }
 
 .footer-text .ft-text-right img {
-    height: 50%;
-    width: 100%;
+    /* height: 50%; */
+    width: 30%;
 }
 
 #btn-SetTable {
@@ -557,4 +566,10 @@ nav a:hover {
 
 .checkTime{
     transform: scale(1.5);
+}
+
+.input-Inf input{
+    width: 100%;
+    /* padding: 10px 20px; */
+    line-height: 30px;
 }
