@@ -27,7 +27,7 @@
                     <a href="">Đặt bàn</a>
                     <a href="">Thực đơn</a>
                     <a href="">Tin tức</a>
-                    <a href="./cart.html">Liên hệ</a>
+                    <a href="./cart.html" target="_blank">Liên hệ</a>
                     <a href="">Đăng nhập</a>
                     <a class="buttton" style="border-radius:5px;">
                         <span class="hotline"> Hotline: 0984966806</span></li>
@@ -230,10 +230,10 @@
                     </div>
                     <div class="second-item">
                         <div class="form-group">
-                            <div class="input-Inf"><input type="text" id="input1" placeholder=" Tên của bạn "></div>
-                            <div class="input-Inf"><input type="text" id="input1" placeholder="Số điện thoại "></div>
-                            <div class="input-Inf"><input type="text" id="input1" placeholder="Số người ăn "></div>
-                            <div class="input-Inf"><input type="date" id="input2" name="bday"> </div>
+                            <div class="input-Inf"><input type="text" id="inputName" placeholder=" Tên của bạn "></div>
+                            <div class="input-Inf"><input type="text" id="inputPhone" placeholder="Số điện thoại "></div>
+                            <div class="input-Inf"><input type="text" id="inputPNum" placeholder="Số người ăn "></div>
+                            <div class="input-Inf"><input type="date" id="inputDay" name="bday"> </div>
 
                             <form class="check">
                                 <input type="checkbox" class="checkTime" onclick="checkTime(0)" name="interest"><span id="setTime">08:00</span>
@@ -268,18 +268,18 @@
                                 <input type="checkbox" class="checkTime" onclick="checkTime(20)" name="interest"><span id="setTime">18:00</span>
                                 <input type="checkbox" class="checkTime" onclick="checkTime(21)" name="interest"><span id="setTime">18:30</span>
                                 <input type="checkbox" class="checkTime" onclick="checkTime(22)" name="interest"><span id="setTime">19:00</span>
-                                <input type="checkbox" class="checkTime" onclick="checkTime(23)" name="interest"><span id="setTime">20:30</span>
+                                <input type="checkbox" class="checkTime" onclick="checkTime(23)" name="interest"><span id="setTime">19:30</span>
                             </form>
 
                             <form class="check">
-                                <input type="checkbox" class="checkTime" onclick="checkTime(24)" name="interest"><span id="setTime">21:00</span>
-                                <input type="checkbox" class="checkTime" onclick="checkTime(25)" name="interest"><span id="setTime">21:30</span>
-                                <input type="checkbox" class="checkTime" onclick="checkTime(26)" name="interest"><span id="setTime">22:00</span>
-                                <input type="checkbox" class="checkTime" onclick="checkTime(27)" name="interest"><span id="setTime">22:30</span>
+                                <input type="checkbox" class="checkTime" onclick="checkTime(24)" name="interest"><span id="setTime">20:00</span>
+                                <input type="checkbox" class="checkTime" onclick="checkTime(25)" name="interest"><span id="setTime">20:30</span>
+                                <input type="checkbox" class="checkTime" onclick="checkTime(26)" name="interest"><span id="setTime">21:00</span>
+                                <input type="checkbox" class="checkTime" onclick="checkTime(27)" name="interest"><span id="setTime">21:30</span>
                             </form>
 
                         
-                            <button id="btn-SetTable">ĐẶT BÀN</button>
+                            <button id="btn-SetTable" onclick="creatBook()">ĐẶT BÀN</button>
                             
                         </div>
                     </div>
