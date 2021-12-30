@@ -1,8 +1,8 @@
-var bookingApi = "http://localhost:3000/booking"
+var bookingApi = "https://61bc10bed8542f001782452a.mockapi.io/booking"
 
 function start(){
     getBookings(function(books){
-        console.log(books)
+        renderBooks(books)
     })
 }
 start();
@@ -13,6 +13,12 @@ function getBookings(callback){
             return response.json();
         })
         .then(callback)
+}
+
+
+function renderBooks(books){
+    var addBooks = document.getElementById("add-books");
+    console.log(books);
 }
 
 
