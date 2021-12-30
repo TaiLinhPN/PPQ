@@ -16,6 +16,7 @@
             <th>Số người</th>
             <th>Ngày</th>
             <th>Tháng</th>
+            <th>chỉnh sửa</th>
           </tr>
         </thead>
         <tbody id="add-books">
@@ -26,6 +27,10 @@
             <td>2</td>
             <td>20-12-2021</td>
             <td>09:00</td>
+            <td>
+                <button onclick="removeBook()">Xóa</button>
+                <button onclick="updateBook()">Sửa</button>
+            </td>
           </tr>
           <tr>
             <th>2</th>
@@ -41,6 +46,7 @@
           </tr>
         </tbody>
       </table>
+      
 <script src="main.js"></script>
 
 </body>
