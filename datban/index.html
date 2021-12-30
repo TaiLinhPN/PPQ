@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đặt bàn</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div class="header">
+        <div class="left-header">
+            <img class="img-logo" src=" https://homebbq.thietkewebsitemienphi.com/wp-content/uploads/2018/02/logo-Sunhomes-BBQ-01.png" alt=" ">
+        </div>
+
+        <nav class="right-header">
+            <a href="../index.html">Trang chủ</a>
+            <a href="">Giới thiệu</a>
+            <a href="">Đặt bàn</a>
+            <a href="../thucdon/index.html">Thực đơn</a>
+            <a href="">Tin tức</a>
+            <a href="">Liên hệ</a>
+            <a href="">Đăng nhập</a>
+            <a class="button" style="border-radius:5px;">
+                <span>Hotline: 0984966806</span></li>
+            </a>
+        </nav>
+    </div>
+    <main id="main">
+        <div id="content">
+            <div class="img">
+                <div class="img-inner">
+                    <img src="https://homebbq.thietkewebsitemienphi.com/wp-content/uploads/2018/02/banner-234-1024x267.jpg">
+                </div>
+            </div>
+            <section>
+                <div class="bg section-bg fill bg-fill bg-loaded">
+                </div>
+                <div class="section-content">
+                    <div class="row row-small">
+                        <div class="col cols">
+                            <div class="col-inner">
+                                <h3 class="alt-font"><span style="font-size: 130%; color: #000000;">Set Table</span></h3>
+                                <p><span style="font-size: 95%;">Quý khách vui lòng đặt bàn trước để có trải nghiệm thưởng thức ẩm thực tốt nhất tại Sun Homes BBQ.</span></p>
+                                <p><span style="font-size: 95%;"><strong><span style="color: #000000;">Gợi ý đặt bàn:</span></strong>
+                                    </span>
+                                </p>
+                                <ul>
+                                    <li class="bullet-arrow"><span style="font-size: 95%;">Đi 1 người: đặt bàn đơn</span></li>
+                                    <li class="bullet-arrow"><span style="font-size: 95%;">Đi 2 người: đặt bàn đôi</span></li>
+                                    <li class="bullet-arrow"><span style="font-size: 95%;">Đi nhóm 4-6 người: đặt bàn 6 người.</span></li>
+                                    <li class="bullet-arrow"><span style="font-size: 95%;">Đi nhóm 6-12 người: đặt bàn dài</span></li>
+                                    <li class="bullet-arrow"><span style="font-size: 95%;">Đi nhóm &gt;12 người: gọi trực tiếp Hotline: 0909.009.009</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="col-inner">
+                                <div role="form" class="forms">
+                                    <form action="">
+                                        <p>
+                                            <span><input type="text" class="inputs" placeholder="Tên của bạn..."></span>
+                                            <br>
+                                            <span><input type="tel" class="inputs" placeholder="Số điện thoại..."></span>
+                                            <br>
+                                            <span><input type="number" class="inputs" placeholder="Số người ăn..."></span>
+                                            <br>
+                                            <span><input type="date" class="inputs" placeholder="Thời gian đặt bàn"></span>
+                                            <br>
+                                            <div class="form-group">
+                                                
+                                                <form class="check">
+                                                    <input type="checkbox" class="checkTime" onclick="checkTime(0)" name="interest"><span id="setTime">08:00</span>
+                                                    <input type="checkbox" class="checkTime" onclick="checkTime(1)" name="interest"><span id="setTime">08:30</span>
+                                                    <input type="checkbox" class="checkTime" onclick="checkTime(2)" name="interest"><span id="setTime">09:00</span>
+                                                    <input type="checkbox" class="checkTime" onclick="checkTime(3)" name="interest"><span id="setTime">09:30</span>
+                                                    <input type="checkbox" class="checkTime" onclick="checkTime(4)" name="interest"><span id="setTime">10:00</span>
+                                                    <input type="checkbox" class="checkTime" onclick="checkTime(5)" name="interest"><span id="setTime">10:30</span>
+                                                </form>
+                    
+                                                <form class="check">
+                                                    <input type="checkbox" class="checkTime" onclick="checkTime(6)" name="interest"><span id="setTime">11:00</span>
+                                                    <input type="checkbox" class="checkTime" onclick="checkTime(7)" name="interest"><span id="setTime">11:30</span>
+                                                    <input type="checkbox" class="checkTime" onclick="checkTime(8)" name="interest"><span id="setTime">12:00</span>
+                                                    <input type="checkbox" class="checkTime" onclick="checkTime(9)" name="interest"><span id="setTime">12:30</span>
+                                                    <input type="checkbox" class="checkTime" onclick="checkTime(10)" name="interest"><span id="setTime">13:00</span>
+                                                    <input type="checkbox" class="checkTime" onclick="checkTime(11)" name="interest"><span id="setTime">13:30</span>
+                                                </form>
+                    
+                                                <form class="check">
+                                                    <input type="checkbox" class="checkTime" onclick="checkTime(12)" name="interest"><span id="setTime">14:00</span>
+                                                    <input type="checkbox" class="checkTime" onclick="checkTime(13)" name="interest"><span id="setTime">14:30</span>
+                                                    <input type="checkbox" class="checkTime" onclick="checkTime(14)" name="interest"><span id="setTime">15:00</span>
+                                                    <input type="checkbox" class="checkTime" onclick="checkTime(15)" name="interest"><span id="setTime">15:30</span>
+                                                    <input type="checkbox" class="checkTime" onclick="checkTime(16)" name="interest"><span id="setTime">16:00</span>
+                                                    <input type="checkbox" class="checkTime" onclick="checkTime(17)" name="interest"><span id="setTime">16:30</span>
+                                                </form>
+                    
+                                                <form class="check">
+                                                    <input type="checkbox" class="checkTime" onclick="checkTime(18)" name="interest"><span id="setTime">17:00</span>
+                                                    <input type="checkbox" class="checkTime" onclick="checkTime(19)" name="interest"><span id="setTime">17:30</span>
+                                                    <input type="checkbox" class="checkTime" onclick="checkTime(20)" name="interest"><span id="setTime">18:00</span>
+                                                    <input type="checkbox" class="checkTime" onclick="checkTime(21)" name="interest"><span id="setTime">18:30</span>
+                                                    <input type="checkbox" class="checkTime" onclick="checkTime(22)" name="interest"><span id="setTime">19:00</span>
+                                                    <input type="checkbox" class="checkTime" onclick="checkTime(23)" name="interest"><span id="setTime">19:30</span>
+                                                </form>
+                    
+                                                <form class="check">
+                                                    <input type="checkbox" class="checkTime" onclick="checkTime(24)" name="interest"><span id="setTime">20:00</span>
+                                                    <input type="checkbox" class="checkTime" onclick="checkTime(25)" name="interest"><span id="setTime">20:30</span>
+                                                    <input type="checkbox" class="checkTime" onclick="checkTime(26)" name="interest"><span id="setTime">21:00</span>
+                                                    <input type="checkbox" class="checkTime" onclick="checkTime(27)" name="interest"><span id="setTime">21:30</span>
+                                                </form>
+                    
+                                            
+                                                <button id="btn-SetTable" onclick="creatBook()">ĐẶT BÀN</button>
+                                                
+                                            </div>
+                                            <span></span>
+                                        </p>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+    <footer class="container container-footer ">
+        <div class="footer-text ">
+            <div class="ft-text-left ">© COPYRIGHT 2010 ONEPAS.JSC, ALL RIGHTS RESERVED<br>Địa chỉ: Nguyễn Thị Minh Khai, Q. Hải Châu, TP. Đà Nẵng</div>
+            <div class="ft-text-right ">CHỨNG NHẬN<br><img src="image/bocongthuong.png "></div>
+        </div>
+    </footer>
+</body>
+
+</html>
