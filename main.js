@@ -1,5 +1,20 @@
+var bookingApi = "http://localhost:3000/booking"
 
-//checkbox
+function start(){
+    getBookings(function(books){
+        console.log(books)
+    })
+}
+start();
+
+function getBookings(callback){
+    fetch(bookingApi)
+        .then(function(response){
+            return response.json;
+        })
+        .then(callback)
+}
+
 
 function checkTime(x) {
     var listCheckTime = document.getElementsByClassName('checkTime');
@@ -10,6 +25,6 @@ function checkTime(x) {
     }
 }
 
-// get data from
+
 
 
