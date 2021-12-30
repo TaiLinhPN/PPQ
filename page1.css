@@ -1,0 +1,560 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    line-height: 1.6;
+    color: #777;
+    font-size: 20px;
+    font-family: Arial;
+}
+
+.header {
+    display: flex;
+    background-color: black;
+    float: center;
+    justify-content: space-around;
+    max-width: 100%;
+}
+
+.img-logo {
+    width: 320px;
+    height: 90px;
+}
+
+.right-header nav a {
+    float: left;
+    text-decoration: none;
+}
+
+.right-header li {
+    float: left;
+}
+
+.right-header {
+    margin-top: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    padding: 8px;
+    color: whitesmoke;
+}
+
+nav a:hover {
+    color: #F3E385;
+}
+
+.buttton:hover {
+    color: rgb(7, 0, 0);
+    background-color: rgb(241, 241, 82);
+}
+
+.buttton {
+    border: 1px solid#F3E385;
+    border-radius: 5px;
+    display: inline-block;
+    padding: 10px;
+}
+
+.button {
+    display: inline-block;
+}
+
+.img-background {
+    width: 100%;
+    height: 100%;
+}
+
+.mySlides {
+    width: 1567px;
+    height: 617px;
+}
+
+.menu-gia {
+    width: 1567px;
+    height: 255px;
+}
+
+.alt-font {
+    font-weight: normal;
+    letter-spacing: -2px;
+    font-size: 40px;
+    color: #000000;
+}
+
+.home {
+    padding: 70px 200px;
+    display: flex;
+    margin-top: 40px;
+}
+
+.the-left {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.the-left-one .alt-font {
+    margin-bottom: -2%;
+    font-family: Didot;
+    font-weight: bolder;
+    font-size: 50px;
+}
+
+.the-left-two,
+.the-left-three {
+    margin-bottom: -2%;
+}
+
+.the-right {
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+}
+
+.food {
+    width: 90%;
+    height: 100%;
+    cursor: pointer;
+    transition-duration: 0.3s;
+    margin-left: 40px;
+}
+
+.food:hover {
+    transform: scale(1.05);
+}
+
+.container-fluid {
+    display: flex;
+    padding: 30px 200px 50px;
+    color: rgb(253, 253, 253)
+}
+
+.container-right {
+    margin-left: 80px;
+    margin-top: -2%;
+    flex: 1
+}
+
+.container-right-one h3 {
+    font-size: 50px;
+    font-family: Didot;
+    font-weight: bolder;
+}
+
+.container-right-two p {
+    margin-top: -4%;
+}
+
+.container-left {
+    display: flex;
+    flex: 1;
+    margin-bottom: -4%;
+}
+
+.container-left-one {
+    flex: 1;
+}
+
+.container-left-two {
+    flex: 1
+}
+
+.menu {
+    background-color: black;
+    margin-top: 20px;
+}
+
+.img-menu4 {
+    width: 95%;
+    height: 180px;
+    padding: 3px 12px 0 0;
+}
+
+.the-right-one,
+.the-right-two {
+    position: relative;
+    flex: 1
+}
+
+.chon-combo {
+    border: 1px solid#949492;
+    border-radius: 5px;
+    display: inline-block;
+    padding: 3px;
+    position: absolute;
+    bottom: 10%;
+    left: 58%;
+    transform: translateX(-50%);
+    cursor: pointer;
+    background-color: black;
+    font-size: 13px;
+}
+
+.img-restaurant {
+    width: 155%;
+    height: 400px;
+    margin-left: 30px;
+    margin-top: 18%;
+}
+
+.img-restaurant2 {
+    height: 400px;
+    width: 43%;
+    margin-top: 5%;
+}
+
+.home {
+    padding: 0px 200px 50px;
+    display: flex;
+}
+
+.the-left1 {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.the-right1 {
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+}
+
+.the-left1-one .alt-font {
+    margin-bottom: -2%;
+    font-family: Didot;
+    font-weight: bolder;
+    font-size: 50px;
+}
+
+.the-left1-two,
+.the-left1-three,
+.the-left1-four {
+    margin-bottom: -4%;
+}
+
+.alt-font {
+    margin-bottom: -2%;
+}
+
+.the-right1-one,
+.the-right1-two {
+    flex: 1
+}
+
+.menu-button {
+    border: 1px solid#ffffff;
+    border-radius: 5px;
+    display: inline-block;
+    padding: 10px;
+}
+
+.menu-button:hover {
+    color: #777;
+    background-color: rgb(255, 255, 253);
+}
+
+.background {
+    cursor: pointer;
+}
+
+.remove {
+    transition: 0.5s;
+    transform: translateX(-100%);
+}
+
+.bt {
+    position: absolute;
+    top: 45%;
+    font-size: 40px;
+    left: 5%;
+    color: #fff;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.background:hover .bt {
+    opacity: 1;
+    transform: translateX(-20px);
+}
+
+.btt {
+    position: absolute;
+    top: 45%;
+    font-size: 40px;
+    left: 95%;
+    color: #fff;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.background:hover .btt {
+    opacity: 1;
+    transform: translateX(-20px);
+}
+
+.the-right-two,
+.the-right-one .chon {
+    color: rgb(255, 254, 254);
+    font-weight: 800
+}
+
+.left1-five {
+    margin-top: 30px;
+}
+
+.left1-five .nhahang {
+    border-radius: 5px;
+    background-color: transparent;
+    padding: 10px 30px;
+    border: 2px solid currentColor;
+}
+
+.left1-five .nhahang:hover {
+    background-color: rgb(44, 44, 236);
+    color: white;
+}
+
+
+/* ============================================== */
+
+.nav-e {
+    background-image: linear-gradient(rgb(0, 0, 0, 0), rgba(0, 0, 0, 0)), url(https://toplist.vn/images/800px/nha-hang-shri-333649.jpg);
+    display: flex;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: cover;
+    object-fit: cover;
+    margin-top: -1%;
+}
+
+.nav-list {
+    padding-left: 0;
+    margin: 01% 5% 0 7%;
+}
+
+.nav-item {
+    color: white;
+    margin: 4% 0%;
+    list-style-type: none;
+    display: inline-block;
+}
+
+.nav-item #text-inner {
+    margin-top: 0px;
+    font-size: 22px;
+}
+
+.nav-item #email {
+    font-size: 22px;
+    color: white;
+    border-radius: 25px;
+    height: 30px;
+    width: 350px;
+}
+
+.nav-item a .dk {
+    border-radius: 10px;
+    width: 100%;
+    height: 40px;
+    font-size: 22px;
+    text-align: center;
+    font-weight: bolder;
+    background: rgb(245, 233, 126);
+    border: none;
+}
+
+
+/* ==================================================== */
+
+.container-cuise {
+    max-width: 100%;
+    margin: 0 auto 0 auto;
+    padding: 2% 10%;
+    height: auto;
+}
+
+.column-layout {
+    display: flex;
+}
+
+.sibar-one {
+    flex: 1;
+}
+
+.sibar-one img {
+    width: 100%;
+    height: 70%;
+    object-fit: cover;
+}
+
+.sibar-two {
+    flex: 1;
+    margin-left: 2%;
+}
+
+.sibar-two h2 {
+    font-size: 50px;
+    margin-top: -1%;
+    color: black;
+    font-family: Didot;
+}
+
+.sibar-two p {
+    font-size: 22px;
+}
+
+.feature-layout {
+    width: 100%;
+    margin-top: -13%;
+    display: flex;
+}
+
+.feature-layout .feature-item img {
+    width: 90%;
+    height: 300px;
+    cursor: pointer;
+    transition-duration: 0.3s;
+}
+
+.feature-layout .feature-item img:hover {
+    transform: scale(1.05);
+}
+
+
+/* ==================================================== */
+
+.content-order {
+    background-image: linear-gradient(rgb(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(https://cdn.tgdd.vn/2020/11/CookProduct/1-1200x676-22.jpg);
+    display: flex;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: cover;
+}
+
+.content-order .form-layout {
+    display: flex;
+    margin: 0 10% 0 10%;
+    justify-content: space-evenly;
+}
+
+.first-item {
+    flex: 1;
+    color: rgb(243, 243, 239);
+}
+
+.first-item h2 {
+    margin-top: 2%;
+    font-size: 45px;
+    font-family: Didot;
+    font-weight: bolder;
+}
+
+.first-item p {
+    margin-top: 1%;
+    width: 96%;
+    font-size: 22px;
+}
+
+.option-Inf hr {
+    margin-left: 0%;
+    width: 90%;
+    font-weight: lighter;
+}
+
+
+/* =========================================== */
+
+.second-item {
+    flex: 1;
+    font-size: 40px;
+    margin-top: 0%;
+    margin-bottom: 1%;
+}
+
+.input-Inf #input1 {
+    height: 30px;
+    width: 95%;
+    border: none;
+    font-size: 22px;
+}
+
+.input-Inf #input2 {
+    height: 36px;
+    width: 95.5%;
+    border: none;
+    font-size: 22px;
+}
+
+#check {
+    margin-top: 2%;
+}
+
+.check1 {
+    margin-top: 0%;
+}
+
+#setTime {
+    margin-left: 3%;
+    font-size: 22px;
+    color: rgb(250, 247, 247);
+}
+
+.button2 a button {
+    height: 40px;
+    width: 100px;
+    background: rgb(247, 225, 35);
+    border: none;
+    border-radius: 10px;
+}
+
+
+/* ====================================================== */
+
+.container-footer {
+    position: relative;
+    margin-top: 2%;
+    background-color: black;
+}
+
+.footer-text {
+    display: flex;
+    color: white;
+    height: 60px;
+    padding-top: 2%;
+    padding-bottom: 0%;
+    justify-content: space-around;
+}
+
+.footer-text .ft-text-left {
+    padding-left: 5%;
+    margin-top: -1%;
+}
+
+.footer-text .ft-text-right {
+    padding-right: 5%;
+    margin-top: -1%;
+}
+
+.footer-text .ft-text-right img {
+    height: 50%;
+    width: 100%;
+}
+
+#btn-SetTable {
+    padding: 10px;
+    background-color: #F3E385;
+}
+
+.checkTime{
+    transform: scale(1.5);
+}
