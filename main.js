@@ -10,7 +10,7 @@ start();
 function getBookings(callback){
     fetch(bookingApi)
         .then(function(response){
-            return response.json;
+            return response.json();
         })
         .then(callback)
 }
