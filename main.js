@@ -26,13 +26,12 @@ function creatBook(){
 
     console.log(name + " " + phone + " " + peopleNumber + " " + day + " " + settime2)
 
-var data ={
-    name: name,
-    sdt: phone,
-    peopleNumber: peopleNumber,
-    day: day,
-    time: settime2
-}
+    var data ={
+        name: name,
+        sdt: phone,
+        peopleNumber: peopleNumber,
+        day: day,
+        time: settime2}
 
     var options = {
         method: 'POST',
@@ -43,11 +42,107 @@ var data ={
         .then(function (response){
             response.json()
         })
-        
+        // .then(function (){
+        //     var addBooks = document.getElementById("add-books");
+            
+        //     var htmls = `
+        //         <tr class ="books-id-${data.id}">
+        //             <th>${data.id}</th>
+        //             <td>${data.name}</td>
+        //             <td>${data.sdt}</td>
+        //             <td>${data.peopleNumber}</td>
+        //             <td>${data.day}</td>
+        //             <td>${data.time}</td>
+        //             <td>
+        //             <button onclick="removeBook(${data.id})">Xóa</button>
+        //             <button onclick="updateBook(${data.id})">Sửa</button>
+        //             </td>
+        //         </tr>
+        //         `
+        //         console.log(addBooks)
+        //     addBooks.innerHTML += htmls;
+
+        // })
     
 
+}
 
+function removeBook(id){
+    var options = {
+        method: 'DELETE',
+        headers: {'Content-Type': 'application/json'}
+    }
+    fetch(bookingApi + '/' + id,options)
+        .then(function (response){
+            response.json();
+        })
+        .then(function (){
+            var booksItem = document.querySelector('.books-id-'+id);
+            booksItem.remove();
+        })
+}
 
+function updateBook(id){
+    var name = document.querySelector('.name-'+id);
+    var sdt = document.querySelector('.sdt-'+id);
+    var peopleNumber = document.querySelector('.peopleNumber-'+id);
+    var day = document.querySelector('.day-'+id);
+    var time = document.querySelector('.time-'+id);
+    var handle = document.querySelector('.handle-'+id);
+
+    name.innerHTML = `<input type="text" value="${name.innerHTML.trim()}" >`
+    sdt.innerHTML = `<input type="text" value="${sdt.innerHTML.trim()}" >`
+    peopleNumber.innerHTML = `<input type="text" value="${peopleNumber.innerHTML.trim()}" >`
+    day.innerHTML = `<input type="date" value="${day.innerHTML.trim()}" >`
+    time.innerHTML = `<input type="text" value="${time.innerHTML.trim()}" >`
+    handle.innerHTML = `<button onclick="getNewdata()">ok</button>`
+    console.log("name: " + name,"sdt: " + sdt, "peopleNumber: " + peopleNumber,"day: " +  day,"time: " +  time)
+    
+    function getNewdata() {
+
+    }
+    getNewdata()
+
+    // var data ={
+    //     name: 'liinh',
+    //     sdt: 'phone',
+    //     peopleNumber: 'peopleNumber',
+    //     day: 'day',
+    //     time: 'settime2'}
+
+    
+
+}
+
+function putdata(id,data) {
+    var options = {
+        method: 'PUT',
+        body: JSON.stringify(data),
+        headers: {'Content-Type': 'application/json'}
+    }
+    fetch(bookingApi + '/' + id,options)
+        .then(function (response){
+            response.json()
+        }).then(function (id){
+            var booksItem = document.querySelector('.books-id-'+id);            
+            var htmls = `
+                <tr class ="books-id-${id}">
+                    <th>${data.id}</th>
+                    <td>${data.name}</td>
+                    <td>${data.sdt}</td>
+                    <td>${data.peopleNumber}</td>
+                    <td>${data.day}</td>
+                    <td>${data.time}</td>
+                    <td>
+                    <button onclick="removeBook(${data.id})">Xóa</button>
+                    <button onclick="updateBook(${data.id})">Sửa</button>
+                    </td>
+                </tr>
+                `
+                console.log(booksItem)
+                booksItem.innerHTML = htmls;
+
+        })
 }
 
 
@@ -56,16 +151,16 @@ function renderBooks(books){
     console.log(books);
     var htmls = books.map(function(book){
         return`
-        <tr>
-            <th>${book.id}</th>
-            <td>${book.name}</td>
-            <td>${book.sdt}</td>
-            <td>${book.peopleNumber}</td>
-            <td>${book.day}</td>
-            <td>${book.time}</td>
-            <td>
-            <button onclick="removeBook(${book.id})">Xóa</button>
-            <button onclick="updateBook(${book.id})">Sửa</button>
+        <tr class ="books-id-${book.id}">
+            <th class ="id-${book.id}">          ${book.id}</th>
+            <td class ="name-${book.id}">        ${book.name}</td>
+            <td class ="sdt-${book.id}">         ${book.sdt}</td>
+            <td class ="peopleNumber-${book.id}">${book.peopleNumber}</td>
+            <td class ="day-${book.id}">         ${book.day}</td>
+            <td class ="time-${book.id}">        ${book.time}</td>
+            <td class ="handle-${book.id}">
+                <button onclick="removeBook(${book.id})">Xóa</button>
+                <button onclick="updateBook(${book.id})">Sửa</button>
             </td>
         </tr>
         `
