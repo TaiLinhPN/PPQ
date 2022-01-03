@@ -562,6 +562,16 @@ nav a:hover {
     background-color: #F3E385;
 }
 
+.see-more{
+    display: none;
+}
+
+.see-more button {
+    padding: 10px;
+    background-color: #49ac10;
+    
+}
+
 .checkTime{
     transform: scale(1.5);
 }

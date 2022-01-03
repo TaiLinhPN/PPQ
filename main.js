@@ -71,23 +71,24 @@ function updateBook(id){
     day.innerHTML           = `<input class ="input-day-${id} type="date" value="${day.innerHTML.trim()}" >`
     time.innerHTML          = `<input class ="input-time-${id}" type="text" value="${time.innerHTML.trim()}" >`
     handle.innerHTML        = `<button onclick='getChangedData(id)' id="btn-handle-${id}" >ok</button>`
-    console.log("name: " + name,"sdt: " + sdt, "peopleNumber: " + peopleNumber,"day: " +  day,"time: " +  time)
 
 }
 
 function getChangedData(id){
     
+    console.log("truoc",id)
     id = id.replace(/btn-handle-/g,'');
+    console.log("sau:",id)
 
     var name = document.querySelector('.input-name-'+id)
     var sdt = document.querySelector('.input-sdt-'+id)
     var peopleNumber = document.querySelector('.input-peopleNumber-'+id)
     var day = document.querySelector('.input-day-'+id)
     var time = document.querySelector('.input-time-'+id)
-    
-    
-    
-    
+
+    // console.log("inner",name.innerHTML)
+    // console.log("vl",name.value)
+
     var data ={
         name: name.value,
         sdt: sdt.value,
@@ -97,9 +98,9 @@ function getChangedData(id){
     
     putdata(id,data)
 
-    console.log("hahaha")
+
     var booksItem = document.querySelector('.books-id-'+id); 
-    console.log(booksItem)           
+    
 
     var htmls =`
     <tr class ="books-id-${id}">
@@ -115,7 +116,7 @@ function getChangedData(id){
         </td>
     </tr>
     `
-        console.log(booksItem)
+        
         booksItem.innerHTML = htmls;
 
 
@@ -173,5 +174,10 @@ function checkTime(x) {
     settime2 = listTime[x]
 }
 
+function seeMore(){
 
+    var btnSeeMore = document.querySelector(".see-more");
+    btnSeeMore.classList.add("display-block")
+
+}
 

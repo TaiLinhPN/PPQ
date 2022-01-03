@@ -131,7 +131,7 @@ var ls2 = getUsers(function(us){
     console.log(us)
     console.log(ls)
     return true
-    
+
 })
 
 console.log(ls2)
