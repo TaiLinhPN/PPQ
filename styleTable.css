@@ -1,0 +1,13 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.table {
+    width: 70%;
+    margin: 0 auto;
+    text-align: center;
+    background-color: rgb(37, 37, 37);
+    color: rgb(246, 246, 246);
+}

@@ -1,6 +1,4 @@
 var bookingApi = "https://61bc10bed8542f001782452a.mockapi.io/booking"
-
-
 var timeSet = ""
 
 function start(){
@@ -24,8 +22,6 @@ function creatBook(){
     var peopleNumber = document.getElementById('inputPNum').value;
     var day = document.getElementById('inputDay').value;
 
-    console.log(name + " " + phone + " " + peopleNumber + " " + day + " " + settime2)
-
     var data ={
         name: name,
         sdt: phone,
@@ -42,29 +38,7 @@ function creatBook(){
         .then(function (response){
             response.json()
         })
-        // .then(function (){
-        //     var addBooks = document.getElementById("add-books");
-            
-        //     var htmls = `
-        //         <tr class ="books-id-${data.id}">
-        //             <th>${data.id}</th>
-        //             <td>${data.name}</td>
-        //             <td>${data.sdt}</td>
-        //             <td>${data.peopleNumber}</td>
-        //             <td>${data.day}</td>
-        //             <td>${data.time}</td>
-        //             <td>
-        //             <button onclick="removeBook(${data.id})">Xóa</button>
-        //             <button onclick="updateBook(${data.id})">Sửa</button>
-        //             </td>
-        //         </tr>
-        //         `
-        //         console.log(addBooks)
-        //     addBooks.innerHTML += htmls;
-
-        // })
     
-
 }
 
 function removeBook(id){
@@ -90,29 +64,64 @@ function updateBook(id){
     var time = document.querySelector('.time-'+id);
     var handle = document.querySelector('.handle-'+id);
 
-    name.innerHTML = `<input type="text" value="${name.innerHTML.trim()}" >`
-    sdt.innerHTML = `<input type="text" value="${sdt.innerHTML.trim()}" >`
-    peopleNumber.innerHTML = `<input type="text" value="${peopleNumber.innerHTML.trim()}" >`
-    day.innerHTML = `<input type="date" value="${day.innerHTML.trim()}" >`
-    time.innerHTML = `<input type="text" value="${time.innerHTML.trim()}" >`
-    handle.innerHTML = `<button onclick="getNewdata()">ok</button>`
+
+    name.innerHTML          = `<input class ="input-name-${id}" type="text" value="${name.innerHTML.trim()}" >`
+    sdt.innerHTML           = `<input class ="input-sdt-${id}" type="text" value="${sdt.innerHTML.trim()}" >`
+    peopleNumber.innerHTML  = `<input class ="input-peopleNumber-${id}" type="text" value="${peopleNumber.innerHTML.trim()}" >`
+    day.innerHTML           = `<input class ="input-day-${id} type="date" value="${day.innerHTML.trim()}" >`
+    time.innerHTML          = `<input class ="input-time-${id}" type="text" value="${time.innerHTML.trim()}" >`
+    handle.innerHTML        = `<button onclick='getChangedData(id)' id="btn-handle-${id}" >ok</button>`
     console.log("name: " + name,"sdt: " + sdt, "peopleNumber: " + peopleNumber,"day: " +  day,"time: " +  time)
-    
-    function getNewdata() {
-
-    }
-    getNewdata()
-
-    // var data ={
-    //     name: 'liinh',
-    //     sdt: 'phone',
-    //     peopleNumber: 'peopleNumber',
-    //     day: 'day',
-    //     time: 'settime2'}
-
-    
 
 }
+
+function getChangedData(id){
+    
+    id = id.replace(/btn-handle-/g,'');
+
+    var name = document.querySelector('.input-name-'+id)
+    var sdt = document.querySelector('.input-sdt-'+id)
+    var peopleNumber = document.querySelector('.input-peopleNumber-'+id)
+    var day = document.querySelector('.input-day-'+id)
+    var time = document.querySelector('.input-time-'+id)
+    
+    
+    
+    
+    var data ={
+        name: name.value,
+        sdt: sdt.value,
+        peopleNumber: peopleNumber.value,
+        day: day.value,
+        time: time.value}
+    
+    putdata(id,data)
+
+    console.log("hahaha")
+    var booksItem = document.querySelector('.books-id-'+id); 
+    console.log(booksItem)           
+
+    var htmls =`
+    <tr class ="books-id-${id}">
+        <th class ="id-${id}">          ${id}</th>
+        <td class ="name-${id}">        ${data.name}</td>
+        <td class ="sdt-${id}">         ${data.sdt}</td>
+        <td class ="peopleNumber-${id}">${data.peopleNumber}</td>
+        <td class ="day-${id}">         ${data.day}</td>
+        <td class ="time-${id}">        ${data.time}</td>
+        <td class ="handle-${id}">
+            <button onclick="removeBook(${id})">Xóa</button>
+            <button onclick="updateBook(${id})">Sửa</button>
+        </td>
+    </tr>
+    `
+        console.log(booksItem)
+        booksItem.innerHTML = htmls;
+
+
+}
+
+
 
 function putdata(id,data) {
     var options = {
@@ -123,25 +132,6 @@ function putdata(id,data) {
     fetch(bookingApi + '/' + id,options)
         .then(function (response){
             response.json()
-        }).then(function (id){
-            var booksItem = document.querySelector('.books-id-'+id);            
-            var htmls = `
-                <tr class ="books-id-${id}">
-                    <th>${data.id}</th>
-                    <td>${data.name}</td>
-                    <td>${data.sdt}</td>
-                    <td>${data.peopleNumber}</td>
-                    <td>${data.day}</td>
-                    <td>${data.time}</td>
-                    <td>
-                    <button onclick="removeBook(${data.id})">Xóa</button>
-                    <button onclick="updateBook(${data.id})">Sửa</button>
-                    </td>
-                </tr>
-                `
-                console.log(booksItem)
-                booksItem.innerHTML = htmls;
-
         })
 }
 
@@ -149,10 +139,12 @@ function putdata(id,data) {
 function renderBooks(books){
     var addBooks = document.getElementById("add-books");
     console.log(books);
+    var stt = 0;
     var htmls = books.map(function(book){
+        stt++
         return`
         <tr class ="books-id-${book.id}">
-            <th class ="id-${book.id}">          ${book.id}</th>
+            <th class ="id-${book.id}">          ${stt}</th>
             <td class ="name-${book.id}">        ${book.name}</td>
             <td class ="sdt-${book.id}">         ${book.sdt}</td>
             <td class ="peopleNumber-${book.id}">${book.peopleNumber}</td>
@@ -182,7 +174,4 @@ function checkTime(x) {
 }
 
 console.log(timeSet)
-
-
-
 
