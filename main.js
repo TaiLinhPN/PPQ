@@ -173,5 +173,5 @@ function checkTime(x) {
     settime2 = listTime[x]
 }
 
-console.log(timeSet)
+
 
