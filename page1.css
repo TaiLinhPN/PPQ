@@ -589,7 +589,7 @@ nav a:hover {
     right: 0;
     top: 0;
     bottom: 0;
-    background-color: rgba(104, 104, 104, 0.1);
+    background-color: rgba(104, 104, 104, 0.3);
 }
 
 .modal-container{

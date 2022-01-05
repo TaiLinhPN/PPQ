@@ -1,0 +1,17 @@
+[
+    {
+      "idMenu":1,
+      "name":"nướng",
+      "list": ["mực","cá"]
+    },
+    {
+      "idMenu":2,
+      "name":"chiên",
+      "list": ["gà","thịt"]
+    },
+    {
+      "idMenu":3,
+      "name":"nước",
+      "list": ["pepsi","coca"]
+    }
+  ]

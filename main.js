@@ -1,3 +1,9 @@
+function ipa(ipa){
+    console.log(ipa)
+    return ipa
+}
+
+
 var bookingApi = "https://61bc10bed8542f001782452a.mockapi.io/booking"
 var timeSet = ""
 
@@ -34,7 +40,7 @@ function creatBook(){
         body: JSON.stringify(data),
         headers: {'Content-Type': 'application/json'}
     }
-    fetch(bookingApi,options)
+    fetch(bookingApi+ '/' + "",options)
         .then(function (response){
             response.json()
         })
@@ -50,10 +56,12 @@ function removeBook(id){
         .then(function (response){
             response.json();
         })
-        .then(function (){
-            var booksItem = document.querySelector('.books-id-'+id);
-            booksItem.remove();
-        })
+    
+    var booksItem = document.querySelector('.books-id-'+id);
+    booksItem.remove();
+        
+        
+        
 }
 
 function updateBook(id){
